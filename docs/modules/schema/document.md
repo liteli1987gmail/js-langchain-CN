@@ -2,7 +2,7 @@
 
 语言模型只知道它们所训练的内容的信息。为了让它们能够回答问题或总结其他信息，你需要将信息传递给语言模型。因此，拥有文档的概念非常重要。
 
-文档本质上非常简单。它由一段文本和可选的元数据组成。文本是我们与语言模型交互的部分，而可选的元数据对于跟踪文档的元数据（例如来源）非常有用。
+文档本质上非常简单。它由一段文本和可选的元数据组成。文本是我们与语言模型交互的部分，而可选的元数据对于跟踪文档的元数据（例如来源)非常有用。
 
 ```typescript
 interface Document {
@@ -42,5 +42,5 @@ const doc = new Document({ pageContent: "foo", metadata: { source: "1" } });
 ```
 
 
-Also check out [Document Loaders](../indexes/document_loaders/) for a way to load documents from a variety of sources.
+同时还可以查看[文档加载器（Document Loaders）](../indexes/document_loaders/)，以了解从各种来源加载文档的方法。
 

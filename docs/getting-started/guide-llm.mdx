@@ -290,14 +290,13 @@ console.log(res);
 代理不再执行它们使用LLM来确定要执行的操作以及顺序。动作可以是使用工具并观察其输出，或者返回给用户。
 
 
-如果正确使用代理，它们可以非常强大。在本教程中，，我们通过最简单的，最高级别的API向您展示如何轻松使用代理。
+如果正确使用代理，它们可以非常强大。在本教程中,我们通过最简单的，最高级别的API向您展示如何轻松使用代理。
 
 
 为了加载代理，您应该了解以下概念:
 
 
-- Tool: A function that performs a specific duty. This can be things like: Google Search, Database lookup, code REPL, other chains. The interface for a tool is currently a function that is expected to have a string as an input, with a string as an output.
-
+- 工具（Tool）：执行特定职责的函数。这些职责可能包括：Google 搜索、数据库查询、代码 REPL（Read-Eval-Print Loop，读取-求值-输出循环）、其他链。目前工具的接口是一个期望输入字符串，并返回一个字符串的函数。
 - LLM: 代理使用的语言模型。
 - Agent: 所使用的代理。这应该是一个引用支持代理类的字符串。由于本教程重点介绍最简单的最高级API，因此仅涵盖使用标准支持的代理。
 
@@ -391,7 +390,7 @@ langchain-examples:start: Got output Olivia Wilde's boyfriend is Jason Sudeikis,
 
 到目前为止，我们经历的所有链和代理都是无状态的。但是，通常情况下，您可能希望一个链或代理具有一些 "内存" 的概念，以便它可以记住其先前的交互信息。这是设计聊天机器人时的最明显和简单的例子 - 您希望它记住先前的消息，以便可以利用上下文进行更好的交流。这将是一种 "短期记忆"。在更复杂的情况下，您可以想象一个链/代理随着时间的推移记住关键信息 - 这将是一种 "长期记忆" 形式。
 
-LangChain提供了几个专门为此目的创建的链。本节介绍了使用这些链之一（“ConversationChain”）。
+LangChain提供了几个专门为此目的创建的链。本节介绍了使用这些链之一（“ConversationChain”)。
 
 默认情况下，“ConversationChain”具有一种简单的记忆类型，它会记住所有先前的输入/输出并将其添加到传递的上下文中。让我们来看看如何使用这个链。
 

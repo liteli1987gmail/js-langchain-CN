@@ -1,7 +1,7 @@
-— — —
+---
 sidebar_position: 3
 sidebar_label: 集成
-— — —
+---
 
 import CodeBlock from "@theme/CodeBlock";
 
@@ -10,7 +10,7 @@ import CodeBlock from "@theme/CodeBlock";
 
 LangChain提供了多种LLM实现，可与各种模型提供者集成。这些是:
 
-## `OpenAI`英文：
+## `OpenAI`
 
 ```typescript
 import { OpenAI } from "langchain/llms/openai";
@@ -36,7 +36,7 @@ console.log({ res });
 ```
 
 
-## Azure `OpenAI`英文：
+## Azure `OpenAI`
 
 ```typescript
 import { OpenAI } from "langchain/llms/openai";
@@ -74,7 +74,7 @@ Vertex AI实现适用于Node.js，而不适用于直接在浏览器中使用，�
 
 在运行此代码之前，请确保您的Google Cloud控制台的相关项目已启用Vertex AI API，并且您已使用以下方法之一进行了身份验证:
 
-- 您已登录帐户（使用`gcloud auth application-default login`）
+- 您已登录帐户（使用`gcloud auth application-default login`)
 - 您正在运行使用许可的服务帐户的计算机上
 
 - 您已下载了允许使用的服务帐户的凭据
@@ -89,7 +89,7 @@ Vertex AI实现适用于Node.js，而不适用于直接在浏览器中使用，�
   variable to the path of this file.
 
 
-## `HuggingFaceInference`英文：
+## `HuggingFaceInference`
 
 ```bash npm2yarn
 
@@ -100,7 +100,7 @@ import GoogleVertexAIExample from "@examples/llms/googlevertexai.ts";
 <CodeBlock language="typescript">{GoogleVertexAIExample}</CodeBlock>
 
 
-## `Cohere`英文：
+## `Cohere`
 
 ```bash npm2yarn
 npm install @huggingface/inference@1
@@ -128,7 +128,7 @@ console.log({ res });
 ```
 
 
-## `Replicate`英文：
+## `Replicate`
 
 ```bash npm2yarn
 npm install cohere-ai
@@ -163,9 +163,6 @@ console.log({ res });
 ## `AWS SageMakerEndpoint`
 
 查阅[AWS SageMaker JumpStart](https://aws.amazon.com/sagemaker/jumpstart/)了解可用模型列表以及如何部署您自己的模型。
-
-```bash npm2yarn
-
 
 
 ```typescript
@@ -208,7 +205,7 @@ import SageMakerEndpointExample from "@examples/models/llm/sagemaker_endpoint.ts
 <CodeBlock language="typescript">{SageMakerEndpointExample}</CodeBlock>
 
 
-## `AI21`英文：
+## `AI21`
 
 
 您可以通过在他们的网站上注册API密钥 [https://www.ai21.com/]，使用AI21Labs的侏罗纪系列模型开始工作并查看可用的基础模型列表。
@@ -394,5 +391,5 @@ const res = await model.call(
 请求和响应将记录在 [PromptLayer仪表板](https://promptlayer.com/home) 中。
 
 
-> **_Note:_** In streaming mode PromptLayer will not log the response.
+> 注意：在流式模式下，PromptLayer 不会记录响应。
 

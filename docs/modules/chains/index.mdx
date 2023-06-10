@@ -15,7 +15,9 @@ import CodeBlock from "@theme/CodeBlock";
 [概念指南](https://docs.langchain.com/docs/components/chains)
 :::info
 
-在一些应用中，仅使用一个语言模型是可以的，但通常将语言模型与其他信息源（例如第三方API或其他语言模型）组合使用是非常有用的。这就是链的概念。##（Using a language model in isolation is fine for some applications， but it is often useful to combine language models with other sources of information， third-party APIs， or even other language models. This is where the concept of a chain comes in.）
+在一些应用中，仅使用一个语言模型是可以的，但通常将语言模型与其他信息源（例如第三方API或其他语言模型)组合使用是非常有用的。
+
+这就是链的概念。
 
 LangChain提供了一个用于链的标准接口，以及一些可直接使用的内置链。您也可以创建自己的链。
 
@@ -36,9 +38,9 @@ import SubclassInterface from "@examples/chains/advanced_subclass.ts";
 
 `_call`方法是自定义链必须实现的主要方法。它接受输入记录并返回输出记录。接收到的输入应符合`inputKeys`数组，返回的输出应符合`outputKeys`数组。
 
-在自定义链中实现此方法时，值得特别关注的是`runManager`参数，它允许您的自定义链参与与内置链相同的回调系统。##（When implementing this method in a custom chain it's worth paying special attention to the `runManager` argument， which is what allows your custom chains to participate in the same [callbacks system](../../production/callbacks/) as the built-in chains.）
+在自定义链中实现此方法时，值得特别关注的是`runManager`参数，它允许您的自定义链参与与内置链相同的回调系统[callbacks system](../../production/callbacks/)。
 
-如果在自定义链中调用另一个链/模型/代理，则应将其传递给调用`runManager？.getChild（）`的结果，该结果将生成一个新的回调管理器，范围限定为该内部运行。例如:
+如果在自定义链中调用另一个链/模型/代理，则应将其传递给调用`runManager？.getChild（)`的结果，该结果将生成一个新的回调管理器，范围限定为该内部运行。例如:
 
 import SubclassCall from "@examples/chains/advanced_subclass_call.ts";
 

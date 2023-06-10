@@ -1,7 +1,7 @@
-----
+---
 sidebar_position: 1
 hide_table_of_contents: true
-----
+---
 
 # 具有多个文件夹的文件夹
 

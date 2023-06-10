@@ -33,5 +33,4 @@ LLMs和聊天模型都基于`BaseLanguageModel`类构建。该类为所有模型
 
 `BaseLanguageModel`类具有两个抽象方法`generatePrompt`和`getNumTokens`，分别由`BaseChatModel`和`BaseLLM`实现。
 
-`BaseLLM` is a subclass of `BaseLanguageModel` that provides a common interface for LLMs while `BaseChatModel` is a subclass of `BaseLanguageModel` that provides a common interface for chat models.
-
+`BaseLLM` 是 `BaseLanguageModel` 的子类，为 LLM（Large Language Model）提供了一个通用的接口，而 `BaseChatModel` 是 `BaseLanguageModel` 的子类，为聊天模型提供了一个通用的接口。

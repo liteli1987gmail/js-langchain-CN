@@ -36,7 +36,7 @@ const docs = await loader.load();
 
 ## 从给定 GitBook 中的所有路径加载
 
-为了使此项功能正常工作，需要使用根路径（例如 https://docs.gitbook.com）初始化 GitbookLoader，并将 `shouldLoadAllPaths` 设置为 `true`。
+为了使此项功能正常工作，需要使用根路径（例如 https://docs.gitbook.com)初始化 GitbookLoader，并将 `shouldLoadAllPaths` 设置为 `true`。
 
 ```typescript
 

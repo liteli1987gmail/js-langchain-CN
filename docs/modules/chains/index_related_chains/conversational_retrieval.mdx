@@ -12,7 +12,7 @@ import ConvoRetrievalQAExample from "@examples/chains/conversational_qa.ts";
 
 `ConversationalRetrievalQA` 链基于 `RetrievalQAChain` 构建，提供了聊天历史记录组件。
 
-它首先将聊天历史记录（显式传递或从提供的记忆中检索）与问题组合为一个独立的问题，然后从检索器中查找相关文档，最后将这些文档和问题传递到问答链中返回响应。
+它首先将聊天历史记录（显式传递或从提供的记忆中检索)与问题组合为一个独立的问题，然后从检索器中查找相关文档，最后将这些文档和问题传递到问答链中返回响应。
 
 要创建一个 `ConversationalRetrievalQA`，你需要一个检索器。在下面的示例中，我们将从 向量存储 创建一个检索器，该存储可以从嵌入中创建。
 
@@ -52,28 +52,29 @@ static fromLLM(
 ```
 
 
-以下是选项对象每个属性的说明:
+以下是选项对象中各属性的说明：
 
-- `questionGeneratorChainOptions`: 一个对象，允许你传递自定义模板和LLM到底层的问题生成链中。
-  - If the template is provided, the `ConversationalRetrievalQAChain` will use this template to generate a question from the conversation context instead of using the question provided in the question parameter.
+- `questionGeneratorChainOptions`：一个对象，允许您将自定义模板和 LLM 传递到底层的问题生成链中。
+  - 如果提供了模板，`ConversationalRetrievalQAChain` 将使用该模板从对话上下文中生成问题，而不是使用问题参数中提供的问题。
+  
+    如果原始问题不包含足够的信息来检索合适的答案，则这将非常有用。
 
-    This can be useful if the original question does not contain enough information to retrieve a suitable answer.
+  - 在这里传递单独的 LLM 允许您使用更便宜/更快的模型来创建简化的问题，同时在最终响应中使用更强大的模型，可以减少不必要的延迟。
 
-  - Passing in a separate LLM here allows you to use a cheaper/faster model to create the condensed question while using a more powerful model for the final response, and can reduce unnecessary latency.
+- `qaChainOptions`：允许您自定义在最后一步使用的特定 QA 链的选项。默认值为 [`StuffDocumentsChain`](/docs/modules/chains/index_related_chains/document_qa)，但是您可以通过传递 `type` 参数来进行自定义以使用那个链。
 
-- `qaChainOptions`: 允许你自定义在最后一步使用的特定QA链的选项。默认值为 [`StuffDocumentsChain`](/docs/modules/chains/index_related_chains/document_qa) ，但你可以通过传递 `type` 参数来自定义使用哪个链。
-  **Passing specific options here is completely optional**, but can be useful if you want to customize the way the response is presented to the end user, or if you have too many documents for the default `StuffDocumentsChain`.
+  **在此处传递特定选项完全是可选的**，但是，如果您想要自定义将响应呈现给最终用户的方式，或者如果您拥有太多文档而无法使用默认的 `StuffDocumentsChain`，则可能非常有用。
 
-  You can see [documentation about the usable fields here](/docs/api/chains/types/QAChainParams).
+  您可以在 [此处查看可以使用的字段的文档](/docs/api/chains/types/QAChainParams)。
 
-- `returnSourceDocuments`: 一个布尔值，表示 `ConversationalRetrievalQAChain` 是否应返回用于检索答案的源文档。如果设置为 true，则文档将包含在 `call()` 方法返回的结果中。如果不设置，则默认值为 false。这对于允许用户查看生成答案所使用的来源非常有用。
-  - If you are using this option and passing in a memory instance, set `inputKey` and `outputKey` on the memory instance to the same values as the chain input and final conversational chain output. These default to `"question"` and `"text"` respectively, and specify the values that the memory should store.
+- `returnSourceDocuments`：一个布尔值，表示 `ConversationalRetrievalQAChain` 是否应返回用于检索答案的源文档。如果设置为 true，则文档将包含在 `call()` 方法返回的结果中。如果未设置，则默认值为 false。这对于允许用户查看生成答案所使用的源非常有用。
 
+  - 如果您使用此选项并传递内存实例，请将内存实例的 `inputKey` 和 `outputKey` 设置为与链输入和最终对话链输出相同的值。它们默认分别为 `"question"` 和 `"text"`，并指定内存应存储的值。
 
 
 ## 内置存储器
 
-以下是一个使用更快的LLM生成问题和更全面的LLM生成最终答案的自定义示例。它使用内置存储对象，并返回所引用的源文档。# Built-in Memory
+以下是一个使用更快的LLM生成问题和更全面的LLM生成最终答案的自定义示例。它使用内置存储对象(Built-in Memory)，并返回所引用的源文档。
 
 import ConvoQABuiltInExample from "@examples/chains/conversational_qa_built_in_memory.ts";
 

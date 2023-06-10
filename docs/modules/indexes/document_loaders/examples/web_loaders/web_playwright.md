@@ -69,13 +69,13 @@ type PlaywrightWebBaseLoaderOptions = {
 
 1. `launchOptions`: 一个可选对象，用于指定要传递给 playwright.chromium.launch() 方法的其他选项。这可以包括选项，例如在无头模式下启动浏览器的 headless 标志。
 
-2. `gotoOptions`: 一个可选对象，用于指定要传递给 page.goto() 方法的其他选项。这可以包括选项，例如 timeout 选项以指定最大导航时间（以毫秒为单位）或 waitUntil 选项以指定何时将导航视为成功。
+2. `gotoOptions`: 一个可选对象，用于指定要传递给 page.goto() 方法的其他选项。这可以包括选项，例如 timeout 选项以指定最大导航时间（以毫秒为单位)或 waitUntil 选项以指定何时将导航视为成功。
 
 
 3. `evaluate`: 是一个可选函数，可以使用自定义评估函数在页面上评估JavaScript代码。这对于从页面提取数据或与页面元素进行交互非常有用。该函数应返回解析为包含评估结果的字符串的Promise。
 
 
-通过将这些选项传递给`PlaywrightWebBaseLoader`构造函数，，您可以自定义加载程序的行为，并使用Playwright强大的功能对Web页面进行抓取和交互。
+通过将这些选项传递给`PlaywrightWebBaseLoader`构造函数,您可以自定义加载程序的行为，并使用Playwright强大的功能对Web页面进行抓取和交互。
 
 
 以下是一个基本示例:：

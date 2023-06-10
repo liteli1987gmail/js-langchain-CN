@@ -28,7 +28,8 @@
     "exclude": [
       "node_modules",
       "dist",
-      "docs"
+      "docs",
+      "build"
     ],
     "typedocOptions": {
       "entryPoints": [

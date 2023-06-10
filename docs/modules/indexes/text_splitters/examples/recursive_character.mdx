@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 推荐使用的TextSplitter是“递归字符文本分割器”。它会通过不同的符号递归地分割文档-从“”开始，然后是“”，再然后是“ ”。这很好，因为它会尽可能地将所有语义相关的内容保持在同一位置。
 
-这里需要了解的重要参数是'chunkSize'和'chunkOverlap'。'ChunkSize'控制最终文档的最大大小（以字符数为单位）。'ChunkOverlap'指定文档之间应该有多少重叠。这通常有助于确保文本不会被奇怪地分割。在下面的示例中，我们将这些值设为较小的值（仅作说明目的），但在实践中它们默认为'4000'和'200'。
+这里需要了解的重要参数是'chunkSize'和'chunkOverlap'。'ChunkSize'控制最终文档的最大大小（以字符数为单位)。'ChunkOverlap'指定文档之间应该有多少重叠。这通常有助于确保文本不会被奇怪地分割。在下面的示例中，我们将这些值设为较小的值（仅作说明目的)，但在实践中它们默认为'4000'和'200'。
 
 ```typescript
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";

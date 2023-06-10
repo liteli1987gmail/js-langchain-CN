@@ -4,9 +4,9 @@ hide_table_of_contents: true
 
 # Docx files
 
-This example goes over how to load data from docx files.
+本示例介绍如何从docx文件中加载数据。
 
-# Setup
+# 安装 Setup
 
 ```bash npm2yarn
 npm install mammoth
@@ -14,7 +14,7 @@ npm install mammoth
 ```
 
 
-# Usage
+# 用法 Usage
 
 ```typescript
 

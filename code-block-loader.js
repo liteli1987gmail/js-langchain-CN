@@ -24,7 +24,7 @@ async function webpackLoader(content, map, meta) {
       sourceType: "module",
       filename: this.resourcePath,
     });
-    console.log('这里是loader' + this.resourcePath)
+
     const imports = [];
 
     result.program.body.forEach((node) => {

@@ -8,7 +8,7 @@ hide_table_of_contents: true
 
 ## 设置
 
-```bash npm2yarn（备注：将npm命令转化为yarn）
+```bash npm2yarn（备注：将npm命令转化为yarn)
 npm install cheerio
 
 ```

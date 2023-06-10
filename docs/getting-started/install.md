@@ -4,9 +4,7 @@ sidebar_position: 1
 
 # 安装和设置
 
-:::info
-要从旧版本 <0.0.52 升级? 请查看 [此部分](#updating-from-0052) 的说明。
-:::
+
 
 ## 支持的环境
 
@@ -189,6 +187,4 @@ import { OpenAI } from "langchain/llms/openai";
 
 此外，您还需要将 `unstructuredClone` 进行 polyfill， 您可以通过安装 `core-js` 并按照[此处](https://github.com/zloirock/core-js)的说明进行操作来实现。
 
-
-If you are running this on Node.js 18+, you do not need to do anything.
-
+如果您在 Node.js 18+ 上运行此代码，您不需要采取任何措施。

@@ -7,9 +7,9 @@ import OpenAIModerationExample from "@examples/chains/openai_moderation.ts";
 ## `OpenAIModerationChain`
 
 
-You can use the `OpenAIModerationChain` which takes care of evaluating the input and identifying whether it violates OpenAI's Terms of Service (TOS). If the input contains any content that breaks the TOS and throwError is set to true, an error will be thrown and caught. If throwError is set to false the chain will return "Text was found that violates OpenAI's content policy."
+您可以使用 `OpenAIModerationChain`，它负责评估输入并确定是否违反了 OpenAI 的服务条款。
 
-
+如果输入包含任何违反服务条款的内容，并且 `throwError` 设置为 `true`，则会抛出并捕获错误。如果 `throwError` 设为 `false`，则该链将返回 "Text was found that violates OpenAI's content policy."（文本中发现违反 OpenAI 内容政策的内容）。
 
 <CodeBlock language="typescript">{OpenAIModerationExample}</CodeBlock>
 

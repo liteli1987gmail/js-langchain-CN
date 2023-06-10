@@ -1,6 +1,8 @@
-缓冲区窗口内存 # Buffer Window Memory
+# Buffer Window Memory
 
-BufferWindowMemory用于跟踪会话中的来回消息，然后使用大小为 `k` 的窗口将最近的 `k` 条来回消息提取出来作为内存。  # back-and-forths in conversation
+BufferWindowMemory用于跟踪会话中的来回消息，然后使用大小为 `k` 的窗口将最近的 `k` 条来回消息提取出来作为内存。 
+
+### back-and-forths in conversation
 
 ```typescript
 import { OpenAI } from "langchain/llms/openai";

@@ -45,8 +45,7 @@ console.log({ res2 });
 
 
 您还可以通过创建并传递一个`ChatHistory`对象来将消息加载到`BufferMemory`实例中。
-这使您可以轻松地从过去的对话中获取状态。#(pick up state from past conversations)
-
+这使您可以轻松地从过去的对话中获取状态。
 ```typescript
 
 import { ChatMessageHistory } from "langchain/memory";

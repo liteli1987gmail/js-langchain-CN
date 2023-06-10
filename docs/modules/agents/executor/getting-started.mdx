@@ -3,25 +3,26 @@ sidebar_label: 开始(Getting Started)
 hide_table_of_contents: true
 ---
 
+
 import CodeBlock from "@theme/CodeBlock";
 
 import Example from "@examples/agents/mrkl.ts";
 
 
-# 开始(Getting Started): 代理执行器(Agent Executors)
+# 代理执行器(Agent Executors)
 
-代理使用LLM来确定采取哪些操作以及采取的顺序。操作可以是使用工具并观察其输出，或返回给用户。(Agents use an LLM to determine which actions to take and in what order. An action can either be using a tool and observing its output，or returning to the user.)
+代理使用LLM来确定采取哪些操作以及采取的顺序。操作可以是使用工具并观察其输出，或返回给用户。
 
-正确使用代理可以非常强大。在本教程中，，我们将向您展示如何通过最简单的，，最高级别的API轻松使用代理。(When used correctly agents can be extremely powerful. In this tutorial，we show you how to easily use agents through the simplest，highest level API.)
+正确使用代理可以非常强大。在本教程中,我们将向您展示如何通过最简单的,最高级别的API轻松使用代理。
 
-为了加载代理，，您应该了解以下概念:(In order to load agents，you should understand the following concepts:)
+为了加载代理,您应该了解以下概念:
 
-- 工具:(Tool)  执行特定职责的函数。这可以是像:谷歌搜索(Google Search)，数据库查找(Database lookup)，代码REPL，其他链。工具的接口目前是预期具有字符串输入，和字符串输出的函数。(A function that performs a specific duty. This can be things like:Google Search，Database lookup，code REPL，other chains. The interface for a tool is currently a function that is expected to have a string as an input，with a string as an output.)
-- LLM: 代理支持的语言模型。(The language model powering the agent.)
-- 代理: 代理以使用。这应该是一个字符串，引用支持的代理类。因为这个笔记本集中在最简单的，，最高级别的API上，所以仅涵盖使用标准支持的代理。(The agent to use. This should be a string that references a support agent class. Because this notebook focuses on the simplest，highest level API，this only covers using the standard supported agents.)
+- 工具:(Tool)  执行特定职责的函数。这可以是像:谷歌搜索(Google Search)，数据库查找(Database lookup)，代码REPL，其他链。工具的接口目前是预期具有字符串输入，和字符串输出的函数。
+- LLM: 代理支持的语言模型。
 
-对于这个例子，，您需要在`.env` 文件中设置SerpAPI环境变量。(For this example，you'll need to set the SerpAPI environment variables in the `.env`file.)
+- 代理: 代理以使用。这应该是一个字符串，引用支持的代理类。因为这个笔记本集中在最简单的,最高级别的API上，所以仅涵盖使用标准支持的代理。
 
+对于这个例子,您需要在`.env` 文件中设置SerpAPI环境变量。
 ```bash
 SERPAPI_API_KEY="..."
 

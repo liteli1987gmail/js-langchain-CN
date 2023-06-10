@@ -10,7 +10,7 @@ sidebar_class_name: node-only
 ## 概述
 
 [Apify](https://apify.com) 是一个云端网页抓取和数据提取平台，
-提供了一个包含一千多个现成应用程序（称作 _Actors_）的 [生态系统](https://apify.com/store)，用于各种网络抓取，爬取，和数据提取的用例。
+提供了一个包含一千多个现成应用程序（称作 _Actors_)的 [生态系统](https://apify.com/store)，用于各种网络抓取，爬取，和数据提取的用例。
 
 本指南展示如何加载文档
 用于存储结构化网络抓取结果的存储空间，
@@ -20,7 +20,6 @@ from an [Apify Dataset](https://docs.apify.com/platform/storage/dataset) — a s
 
 数据集通常用于保存演员的结果。
 例如， [网站内容爬虫](https://apify.com/apify/website-content-crawler) 演员，
-Datasets are typically used to save results of Actors.
 
 深度爬取网站，如文档，知识库，帮助中心或博客等，并将网页的文本内容存储到数据集中。，
 
@@ -28,11 +27,11 @@ Datasets are typically used to save results of Actors.
 
 您首先需要安装官方的 Apify 客户端:
 
-```bash npm2yarn
-You'll first need to install the official Apify client:
+```npm2yarn
 
+npm install apify-client
 
-
+```
 
 您还需要注册并获取您的 [Apify API 令牌](https://console.apify.com/account/integrations)。
 
@@ -43,12 +42,6 @@ You'll first need to install the official Apify client:
 如果您尚未在 Apify 平台上拥有现有数据集，则需要调用 Actor 并等待结果来初始化文档加载程序。
 
 **注意:** 调用演员可能需要很长时间，大约需要数小时或甚至数日来处理大型网站！
-If you don't already have an existing dataset on the Apify platform, you'll need to initialize the document loader by calling an Actor and waiting for the results.
-
-
-
-**Note:** Calling an Actor can take a significant amount of time, on the order of hours, or even days for large sites!
-
 
 
 以下是一个例子:

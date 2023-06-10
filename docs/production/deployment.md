@@ -9,19 +9,18 @@ LangChain 是用于构建使用语言模型的应用程序的库。它不是 Web
 部署应用程序有几个高级选项:
 
 - 部署到虚拟机或容器中
-  - Persistent filesystem means you can save and load files from disk
+  - 持久化文件系统意味着你可以从磁盘中保存和加载文件
 
-  - Always-running process means you can cache some things in memory
+  - 永久运行的进程意味着你可以在内存中缓存一些东西
 
-  - You can support long-running requests, such as WebSockets
+  - 你可以支持长时间运行的请求，例如WebSockets
 
 - 部署到无服务器环境
-  - No persistent filesystem means you can load files from disk, but not save them for later
+  - 没有持久化文件系统意味着你可以从磁盘中加载文件，但是不能将它们保存以备后用。
 
-  - Cold start means you can't cache things in memory and expect them to be cached between requests
+  - 冷启动意味着你不能在内存中缓存东西，并期望在请求之间被缓存。
 
-  - Function timeouts mean you can't support long-running requests, such as WebSockets
-
+  - 函数超时意味着你不能支持长时间运行的请求，例如WebSockets。
 
 其他一些考虑事项包括:
 
@@ -46,5 +45,5 @@ LangChain 是用于构建使用语言模型的应用程序的库。它不是 Web
 [Kinsta](https://kinsta.com)是一个以开发人员为中心的云主机平台。
 
 
-Use [our hello-world template](https://github.com/kinsta/hello-world-langchainjs) for an example of how to deploy your next LangChain app at Kinsta in minutes.
+使用[我们的hello-world模板](https://github.com/kinsta/hello-world-langchainjs)，了解如何在Kinsta上在几分钟内部署你的下一个LangChain应用程序的示例。
 

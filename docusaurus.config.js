@@ -7,7 +7,6 @@ const { ProvidePlugin } = require("webpack");
 const path = require("path");
 
 const examplesPath = path.resolve(__dirname, ".", "examples", "src");
-const themePath = path.resolve(__dirname, ".", "src", "theme");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -18,7 +17,7 @@ const config = {
     mendableAnonKey: process.env.MENDABLE_ANON_KEY,
   },
   // Set the production url of your site here
-  url: "https://js.langchain.com",
+  url: "https://js.langchain.com.cn",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -73,7 +72,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/hwchase17/langchainjs/edit/main/docs/",
+          editUrl: "https://github.com/liteli1987gmail/js-langchain-CN/tree/main/docs/",
           remarkPlugins: [
             [require("@docusaurus/remark-plugin-npm2yarn"), { sync: true }],
           ],
@@ -124,7 +123,7 @@ const config = {
             position: "left",
           },
           {
-            href: "https://python.langchain.com/en/latest/",
+            href: "https://www.langchain.com.cn/",
             label: "Python Docs",
             position: "left",
           },
@@ -135,7 +134,7 @@ const config = {
           },
           // Please keep GitHub link to the right for consistency.
           {
-            href: "https://github.com/hwchase17/langchainjs",
+            href: "https://github.com/liteli1987gmail/js-langchain-CN",
             label: "GitHub",
             position: "right",
           },
@@ -162,11 +161,11 @@ const config = {
             items: [
               {
                 label: "Python",
-                href: "https://github.com/hwchase17/langchain",
+                href: "https://github.com/liteli1987gmail/langchainzh",
               },
               {
                 label: "JS/TS",
-                href: "https://github.com/hwchase17/langchainjs",
+                href: "https://github.com/liteli1987gmail/js-langchain-CN",
               },
             ],
           },
@@ -175,16 +174,16 @@ const config = {
             items: [
               {
                 label: "Homepage",
-                href: "https://langchain.com",
+                href: "https://www.langchain.com.cn/",
               },
-              {
-                label: "Blog",
-                href: "https://blog.langchain.dev",
-              },
+              // {
+              //   label: "Blog",
+              //   href: "https://blog.langchain.dev",
+              // },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} LangChain, Inc.`,
+        copyright: `Copyright © ${new Date().getFullYear()} LangChain中文网.`,
       },
     }),
 };

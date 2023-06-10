@@ -125,7 +125,7 @@ npx prisma migrate dev
 
 
 :::警告
-表名和列名（例如 `tableName`、`vectorColumnName`、`columns` 和 `filter` 中的字段）直接传递到 SQL 查询中，没有参数化。这些字段必须在使用前进行净化以避免 SQL 注入。
+表名和列名（例如 `tableName`、`vectorColumnName`、`columns` 和 `filter` 中的字段)直接传递到 SQL 查询中，没有参数化。这些字段必须在使用前进行净化以避免 SQL 注入。
 These fields must be sanitized beforehand to avoid SQL injection.
 
 :::
@@ -147,5 +147,5 @@ import Schema from "@examples/indexes/vector_stores/prisma_vectorstore/prisma/sc
 <CodeBlock language="prisma">{Schema}</CodeBlock>
 
 
-You can remove `namespace` if you don't need it.
+> 如果不需要，你可以删除`namespace`。
 

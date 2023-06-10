@@ -69,10 +69,10 @@ type PuppeteerWebBaseLoaderOptions = {
 
 1. `launchOptions`: 一个可选的对象，用于指定要传递给 puppeteer.launch() 方法的附加选项。这可以包括选项，如 headless 标志，以在无头模式下启动浏览器，或者 slowMo 选项，以减慢 Puppeteer 的操作，使其更容易跟踪。
 
-2. `gotoOptions`: 一个可选的对象，用于指定要传递给 page.goto() 方法的附加选项。这可以包括选项，如 timeout 选项，以指定最大导航时间（以毫秒为单位），或者 waitUntil 选项，以指定何时将导航视为成功。
+2. `gotoOptions`: 一个可选的对象，用于指定要传递给 page.goto() 方法的附加选项。这可以包括选项，如 timeout 选项，以指定最大导航时间（以毫秒为单位)，或者 waitUntil 选项，以指定何时将导航视为成功。
 
 
-3. `evaluate`（可选）：可以使用page.evaluate()方法在页面上评估JavaScript代码的可选函数。这对于从页面提取数据或与页面元素交互非常有用。该函数应返回一个Promise，该Promise解析为包含评估结果的字符串。
+3. `evaluate`（可选)：可以使用page.evaluate()方法在页面上评估JavaScript代码的可选函数。这对于从页面提取数据或与页面元素交互非常有用。该函数应返回一个Promise，该Promise解析为包含评估结果的字符串。
 
 
 通过将这些选项传递给`PuppeteerWebBaseLoader`构造函数，您可以自定义加载程序的行为并使用Puppeteer的强大功能来抓取和与网页交互。

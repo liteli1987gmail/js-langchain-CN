@@ -133,7 +133,7 @@ const model = new OpenAI({ cache });
 
 
 
-##取消请求
+## 取消请求
 
 
 您可以在调用模型时传递一个`signal`选项来取消请求。例如，对于OpenAI:
@@ -143,9 +143,7 @@ const model = new OpenAI({ cache });
 
 
 
-Note, this will only cancel the outgoing request if the underlying provider exposes that option. LangChain will cancel the underlying request if possible, otherwise it will cancel the processing of the response.
-
-
+请注意，如果底层提供程序公开了取消请求的选项，那么此操作仅会取消即将发出的请求。LangChain 将尽可能取消底层请求，否则它将取消响应的处理。
 
 ## Dealing with Rate Limits
 
@@ -193,9 +191,7 @@ const model = new OpenAI({ maxRetries: 10 });
 ## 订阅事件
 
 
-Especially when using an agent, there can be a lot of back-and-forth going on behind the scenes as a LLM processes a prompt. For agents, the response object contains an intermediateSteps object that you can print to see an overview of the steps it took to get there. If that's not enough and you want to see every exchange with the LLM, you can pass callbacks to the LLM for custom logging (or anything else you want to do) as the model goes through the steps:
-
-
+特别是在使用代理时，在 LLM 处理提示时可能会有大量的后台交互。对于代理，响应对象包含一个 `intermediateSteps` 对象，您可以打印该对象来查看它所采取的步骤概述。如果这不够用，并且您想要看到与 LLM 的每个交互，您可以将回调传递给 LLM，以进行自定义日志记录（或任何其他您想要执行的操作），当模型通过这些步骤时。
 
 如需了解可用事件的更多信息，请参阅文档中的[回调]部分(/docs/production/callbacks/)。#Callbacks
 

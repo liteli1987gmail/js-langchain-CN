@@ -70,7 +70,7 @@ AIChatMessage { text: "J'aime programmer." }
 
 #### 多条消息
 
-OpenAI的在线聊天模型（目前包括`gpt-3.5-turbo`和`gpt-4`以及Azure OpenAI的`gpt-4-32k`）支持多条消息作为输入。请参见[这里]（https://platform.openai.com/docs/guides/chat/chat -vs-completions）了解更多信息。以下是向聊天模型发送系统消息和用户消息的示例:
+OpenAI的在线聊天模型（目前包括`gpt-3.5-turbo`和`gpt-4`以及Azure OpenAI的`gpt-4-32k`)支持多条消息作为输入。请参见[这里](https://platform.openai.com/docs/guides/chat/chat -vs-completions)了解更多信息。以下是向聊天模型发送系统消息和用户消息的示例:
 
 > **&#9432;** 注意，如果您使用Azure OpenAI，请确保更改部署名称以使用您选择的模型的部署。
 
@@ -324,7 +324,7 @@ console.log(responseB);
 最后，我们介绍了工具和代理，它们通过其他能力扩展了模型，例如搜索或计算器。
 
 
-工具是一个函数，它接受一个字符串（例如搜索查询）并返回一个字符串（例如搜索结果）。它们还有一个名称和描述，由聊天模型用于识别应该调用哪个工具。
+工具是一个函数，它接受一个字符串（例如搜索查询)并返回一个字符串（例如搜索结果)。它们还有一个名称和描述，由聊天模型用于识别应该调用哪个工具。
 
 
 ```typescript
@@ -342,7 +342,7 @@ class Tool {
 
 
 
-代理是对代理提示链（例如MRKL）的无状态包装器，它负责将工具按格式放入提示中，并解析从聊天模型获取的响应。
+代理是对代理提示链（例如MRKL)的无状态包装器，它负责将工具按格式放入提示中，并解析从聊天模型获取的响应。
 
 
 ```typescript
@@ -506,7 +506,7 @@ const chain = new ConversationChain({
 
 
 
-该链将内部累加发送到模型和接收的输出消息。然后，在下一次调用时，它将把消息注入提示符中。所以你可以多次调用该链，并且它会记住先前的消息。:(The chain will internally accumulate the messages sent to the model and the ones received as output. Then it will inject the messages into the prompt on the next call. So you can call the chain a few times and it remembers previous messages.)
+该链将内部累加发送到模型和接收的输出消息。然后，在下一次调用时，它将把消息注入提示符中。所以你可以多次调用该链，并且它会记住先前的消息。(The chain will internally accumulate the messages sent to the model and the ones received as output. Then it will inject the messages into the prompt on the next call. So you can call the chain a few times and it remembers previous messages.)
 
 ```typescript
 const responseH = await chain.call({
