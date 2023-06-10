@@ -25,7 +25,7 @@ npm install pg
 
 import CodeBlock from "@theme/CodeBlock";
 
-`import DockerExample from "@examples/indexes/vector_stores/typeorm_vectorstore/docker-compose.example.yml";`
+`import DockerExample from "!!raw-loader!@examples/indexes/vector_stores/typeorm_vectorstore/docker-compose.example.yml";`
 
 
 `<CodeBlock language="yml" name="docker-compose.yml">{DockerExample}</CodeBlock>`
@@ -37,7 +37,7 @@ import CodeBlock from "@theme/CodeBlock";
 
 ## 用法
 
-import Example from "@examples/indexes/vector_stores/typeorm_vectorstore/typeorm.ts";
+import Example from "!!raw-loader!@examples/indexes/vector_stores/typeorm_vectorstore/typeorm.ts";
 
 
 使用`TypeORMVectorStore`的一个完整的示例如下:

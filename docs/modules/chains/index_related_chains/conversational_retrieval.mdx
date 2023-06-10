@@ -5,7 +5,7 @@ sidebar_position: 3
 
 import CodeBlock from "@theme/CodeBlock";
 
-import ConvoRetrievalQAExample from "@examples/chains/conversational_qa.ts";
+import ConvoRetrievalQAExample from "!!raw-loader!@examples/chains/conversational_qa.ts";
 
 
 # 对话式检索问答
@@ -16,7 +16,7 @@ import ConvoRetrievalQAExample from "@examples/chains/conversational_qa.ts";
 
 要创建一个 `ConversationalRetrievalQA`，你需要一个检索器。在下面的示例中，我们将从 向量存储 创建一个检索器，该存储可以从嵌入中创建。
 
-import Example from "@examples/chains/conversational_qa.ts";
+import Example from "!!raw-loader!@examples/chains/conversational_qa.ts";
 
 
 <CodeBlock language="typescript">{ConvoRetrievalQAExample}</CodeBlock>
@@ -76,7 +76,7 @@ static fromLLM(
 
 以下是一个使用更快的LLM生成问题和更全面的LLM生成最终答案的自定义示例。它使用内置存储对象(Built-in Memory)，并返回所引用的源文档。
 
-import ConvoQABuiltInExample from "@examples/chains/conversational_qa_built_in_memory.ts";
+import ConvoQABuiltInExample from "!!raw-loader!@examples/chains/conversational_qa_built_in_memory.ts";
 
 
 <CodeBlock language="typescript">{ConvoQABuiltInExample}</CodeBlock>
@@ -86,7 +86,7 @@ import ConvoQABuiltInExample from "@examples/chains/conversational_qa_built_in_m
 
 您还可以使用上述使用两个不同的LLM来仅从链中流式传输最终响应而不是中间独立问题生成步骤的输出的概念。以下是一个示例。# Streaming
 
-import ConvoQAStreamingExample from "@examples/chains/conversational_qa_streaming.ts";
+import ConvoQAStreamingExample from "!!raw-loader!@examples/chains/conversational_qa_streaming.ts";
 
 
 <CodeBlock language="typescript">{ConvoQAStreamingExample}</CodeBlock>
@@ -97,7 +97,7 @@ import ConvoQAStreamingExample from "@examples/chains/conversational_qa_streamin
 如果您希望以特定方式格式化聊天历史记录，则还可以通过省略`memory`选项并直接将`chat_history`字符串传递到`chain.call`方法中来显式传递聊天历史记录。# Externally-Managed Memory
 
 
-import ConvoQAExternalMemoryExample from "@examples/chains/conversational_qa_external_memory.ts";
+import ConvoQAExternalMemoryExample from "!!raw-loader!@examples/chains/conversational_qa_external_memory.ts";
 
 
 

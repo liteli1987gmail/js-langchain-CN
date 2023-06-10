@@ -28,7 +28,7 @@ LangChain提供了一个用于链的标准接口，以及一些可直接使用�
 
 要实现自己的自定义链，您可以继承`BaseChain`并实现以下方法:
 
-import SubclassInterface from "@examples/chains/advanced_subclass.ts";
+import SubclassInterface from "!!raw-loader!@examples/chains/advanced_subclass.ts";
 
 
 <CodeBlock language="typescript">{SubclassInterface}</CodeBlock>
@@ -42,7 +42,7 @@ import SubclassInterface from "@examples/chains/advanced_subclass.ts";
 
 如果在自定义链中调用另一个链/模型/代理，则应将其传递给调用`runManager？.getChild（)`的结果，该结果将生成一个新的回调管理器，范围限定为该内部运行。例如:
 
-import SubclassCall from "@examples/chains/advanced_subclass_call.ts";
+import SubclassCall from "!!raw-loader!@examples/chains/advanced_subclass_call.ts";
 
 
 

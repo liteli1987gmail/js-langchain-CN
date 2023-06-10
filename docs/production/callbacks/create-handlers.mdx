@@ -7,7 +7,7 @@ import CodeBlock from "@theme/CodeBlock";
 
 您还可以通过实现 `BaseCallbackHandler` 接口来创建自己的处理程序。如果您想做一些比仅记录到控制台更复杂的工作， 比如将事件发送到日志记录服务。这里是一个简单的处理程序实现，用于记录到控制台 :
 
-import CustomHandlerExample from "@examples/callbacks/custom_handler.ts";
+import CustomHandlerExample from "!!raw-loader!@examples/callbacks/custom_handler.ts";
 
 
 <CodeBlock language="typescript">{CustomHandlerExample}</CodeBlock>

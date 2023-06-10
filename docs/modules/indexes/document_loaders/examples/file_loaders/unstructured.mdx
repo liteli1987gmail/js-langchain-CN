@@ -22,7 +22,7 @@ docker run -p 8000:8000 -d --rm --name unstructured-api quay.io/unstructured-io/
 
 import CodeBlock from "@theme/CodeBlock";
 
-import Example from "@examples/document_loaders/unstructured.ts";
+import Example from "!!raw-loader!@examples/document_loaders/unstructured.ts";
 
 
 <CodeBlock language="typescript">{Example}</CodeBlock>
@@ -32,7 +32,7 @@ import Example from "@examples/document_loaders/unstructured.ts";
 
 您还可以使用 'UnstructuredDirectoryLoader' 从目录中加载所有文件，其继承自 ['DirectoryLoader'](./directory.md)
 
-import DirectoryExample from "@examples/document_loaders/unstructured_directory.ts";
+import DirectoryExample from "!!raw-loader!@examples/document_loaders/unstructured_directory.ts";
 
 
 

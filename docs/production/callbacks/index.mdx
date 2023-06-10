@@ -23,7 +23,7 @@ import DocCardList from "@theme/DocCardList";
 
 在构造函数中定义，如 `new LLMChain({ callbacks: [handler] })`，将用于该对象上进行的所有调用，并且仅适用于该对象本身。例如，如果你将处理程序传递给 `LLMChain` 构造函数，则不会被连接到该链上的模型使用。
 
-import ConstructorExample from "@examples/callbacks/docs_constructor_callbacks.ts";
+import ConstructorExample from "!!raw-loader!@examples/callbacks/docs_constructor_callbacks.ts";
 
 
 <CodeBlock language="typescript">{ConstructorExample}</CodeBlock>
@@ -33,7 +33,7 @@ import ConstructorExample from "@examples/callbacks/docs_constructor_callbacks.t
 
 在发出请求的 `call()`/`run()`/`apply()` 方法中定义，例如 `chain.call({ input: '...' }， [handler])`，将仅用于该特定请求及其包含的所有子请求（例如，对 LLMChain 的调用会触发对模型的调用，该模型使用在 `call()` 方法中传递的相同处理程序)。
 
-import RequestExample from "@examples/callbacks/docs_request_callbacks.ts";
+import RequestExample from "!!raw-loader!@examples/callbacks/docs_request_callbacks.ts";
 
 
 <CodeBlock language="typescript">{RequestExample}</CodeBlock>
@@ -45,7 +45,7 @@ import RequestExample from "@examples/callbacks/docs_request_callbacks.ts";
 `verbose`参数可用于API中的大部分对象（链接，模型，工具，代理等)作为构造参数。例如，`new LLMChain({ verbose: true })`，它相当于将`callbacks`参数传递给该对象和所有子对象的`ConsoleCallbackHandler`。这对于调试非常有用，因为它会将所有事件记录在控制台上。您还可以通过设置环境变量`LANGCHAIN_VERBOSE=true`来为整个应用程序启用详细模式。
 
 
-import VerboseExample from "@examples/callbacks/docs_verbose.ts";
+import VerboseExample from "!!raw-loader!@examples/callbacks/docs_verbose.ts";
 
 
 
@@ -69,7 +69,7 @@ import VerboseExample from "@examples/callbacks/docs_verbose.ts";
 LangChain提供了一些内置处理程序，可用于入门。这些可在`langchain/callbacks`模块中使用。最基本的处理程序是`ConsoleCallbackHandler`，只需将所有事件记录到控制台即可。在将`verbose`标志设置为`true`的情况下，`ConsoleCallbackHandler`将在不显式传递的情况下被调用。
 
 
-import ConsoleExample from "@examples/callbacks/console_handler.ts";
+import ConsoleExample from "!!raw-loader!@examples/callbacks/console_handler.ts";
 
 
 
@@ -84,7 +84,7 @@ import ConsoleExample from "@examples/callbacks/console_handler.ts";
 您可以通过将普通对象传递给`callbacks`参数来创建一个临时处理程序。该对象应实现[`CallbackHandlerMethods`](../../api/callbacks/interfaces/CallbackHandlerMethods)接口。如果您需要创建一个仅用于单个请求的处理程序，这将非常有用，例如流式传输LLM / Agent /等的输出到WebSocket。
 
 
-import StreamingExample from "@examples/models/llm/llm_streaming.ts";
+import StreamingExample from "!!raw-loader!@examples/models/llm/llm_streaming.ts";
 
 
 
@@ -102,7 +102,7 @@ This is a more complete example that passes a `CallbackManager` to a ChatModel, 
 
 
 
-import AgentExample from "@examples/agents/streaming.ts";
+import AgentExample from "!!raw-loader!@examples/agents/streaming.ts";
 
 
 

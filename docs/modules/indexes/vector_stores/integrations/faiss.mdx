@@ -37,7 +37,7 @@ npm install -S pickleparser
 
 ### 从文本创建新索引
 
-import ExampleTexts from "@examples/indexes/vector_stores/faiss.ts";
+import ExampleTexts from "!!raw-loader!@examples/indexes/vector_stores/faiss.ts";
 
 
 <CodeBlock language="typescript">{ExampleTexts}</CodeBlock>
@@ -45,7 +45,7 @@ import ExampleTexts from "@examples/indexes/vector_stores/faiss.ts";
 
 ### 从加载器创建新索引
 
-import ExampleLoader from "@examples/indexes/vector_stores/faiss_fromdocs.ts";
+import ExampleLoader from "!!raw-loader!@examples/indexes/vector_stores/faiss_fromdocs.ts";
 
 
 <CodeBlock language="typescript">{ExampleLoader}</CodeBlock>
@@ -53,7 +53,7 @@ import ExampleLoader from "@examples/indexes/vector_stores/faiss_fromdocs.ts";
 
 ### 将索引保存到文件并再次加载
 
-import ExampleSave from "@examples/indexes/vector_stores/faiss_saveload.ts";
+import ExampleSave from "!!raw-loader!@examples/indexes/vector_stores/faiss_saveload.ts";
 
 
 <CodeBlock language="typescript">{ExampleSave}</CodeBlock>
@@ -61,7 +61,7 @@ import ExampleSave from "@examples/indexes/vector_stores/faiss_saveload.ts";
 
 ### 从[Python实现](https://python.langchain.com/en/latest/modules/indexes/vectorstores/examples/faiss.html#saving-and-loading)中加载保存的文件
 
-import ExamplePython from "@examples/indexes/vector_stores/faiss_loadfrompython.ts";
+import ExamplePython from "!!raw-loader!@examples/indexes/vector_stores/faiss_loadfrompython.ts";
 
 
 

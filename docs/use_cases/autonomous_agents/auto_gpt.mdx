@@ -11,7 +11,7 @@ AutoGPT是一个使用长期记忆和专为独立工作设计的提示（即无�
 
 在这个例子中，我们使用AutoGPT为给定位置预测天气。 这个例子被设计为运行在所有的JS环境中，包括浏览器。
 
-import IsomorphicExample from "@examples/experimental/autogpt/weather_browser.ts";
+import IsomorphicExample from "!!raw-loader!@examples/experimental/autogpt/weather_browser.ts";
 
 
 ## Node.js示例
@@ -21,7 +21,7 @@ import IsomorphicExample from "@examples/experimental/autogpt/weather_browser.ts
 
 在这个示例中，我们使用AutoGPT为给定位置预测天气。 这个示例被设计为在Node.js中运行，因此它使用本地文件系统和一个仅限Node的向量存储。
 
-import NodeExample from "@examples/experimental/autogpt/weather.ts";
+import NodeExample from "!!raw-loader!@examples/experimental/autogpt/weather.ts";
 
 
 ### This example is designed to run in Node.js， and uses the local filesystem and a Node-only vector store.

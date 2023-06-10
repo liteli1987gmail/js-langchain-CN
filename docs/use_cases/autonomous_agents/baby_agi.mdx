@@ -17,7 +17,7 @@ BabyAGI由三个组成部分构成:
 
 ## 简单示例
 
-import SimpleExample from "@examples/experimental/babyagi/weather.ts";
+import SimpleExample from "!!raw-loader!@examples/experimental/babyagi/weather.ts";
 
 
 在这个示例中，我们直接使用BabyAGI没有任何工具。您会发现成功创建了任务列表，但在执行任务时我们没有得到具体结果。这是因为我们没有为BabyAGI提供任何工具。在下一个示例中，我们将看到如何做到这一点。
@@ -27,7 +27,7 @@ import SimpleExample from "@examples/experimental/babyagi/weather.ts";
 
 ## 带工具的示例
 
-import ToolsExample from "@examples/experimental/babyagi/weather_with_tools.ts";
+import ToolsExample from "!!raw-loader!@examples/experimental/babyagi/weather_with_tools.ts";
 
 
 在这个示例中，我们用一个带有搜索工具的自定义代理替换了执行链。这使得BabyAGI能够在执行任务时使用真实世界的数据，从而使其更加强大。您可以添加其他工具来增强BabyAGI的能力。

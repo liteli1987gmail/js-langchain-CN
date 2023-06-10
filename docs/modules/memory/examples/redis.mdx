@@ -26,7 +26,7 @@ npm install redis
 Redis中存储的每个聊天历史记录会话都必须具有唯一的ID。你可以提供一个可选的`sessionTTL`参数来使会话在一定时间后过期。
 传递给`createClient`方法的`config`参数直接传递给[node-redis](https://github.com/redis/node-redis)，并使用所有相同的参数。
 
-import Example from "@examples/memory/redis.ts";
+import Example from "!!raw-loader!@examples/memory/redis.ts";
 
 
 <CodeBlock language="typescript">{Example}</CodeBlock>
@@ -36,7 +36,7 @@ import Example from "@examples/memory/redis.ts";
 
 您也可以直接传递先前创建的[node-redis](https://github.com/redis/node-redis)客户端实例:
 
-import AdvancedExample from "@examples/memory/redis-advanced.ts";
+import AdvancedExample from "!!raw-loader!@examples/memory/redis-advanced.ts";
 
 
 

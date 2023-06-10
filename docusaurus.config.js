@@ -72,7 +72,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/liteli1987gmail/js-langchain-CN/tree/main/docs/",
+          editUrl: "https://github.com/liteli1987gmail/js-langchain-CN/tree/main/",
           remarkPlugins: [
             [require("@docusaurus/remark-plugin-npm2yarn"), { sync: true }],
           ],
