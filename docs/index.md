@@ -1,7 +1,8 @@
 # 欢迎使用LangChain
 
+![LangChain](https://pica.zhimg.com/50/v2-56e8bbb52aa271012541c1fe1ceb11a2_r.gif 'LangChain中文网')
 
-LangChain是一种基于语言模型的应用程序开发框架。我们相信，最强大和不同的应用程序不仅会通过API调用语言模型，还会#
+LangChain是一种基于语言模型的应用程序开发框架。我们相信，最强大和不同的应用程序不仅会通过API调用语言模型，还会:
 
 
 - _了解数据_: 连接语言模型与其他数据源

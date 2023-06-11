@@ -11,11 +11,14 @@ const examplesPath = path.resolve(__dirname, ".", "examples", "src");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "🦜️🔗 Langchain",
-  tagline: "LangChain JS Docs",
+  tagline: "Langchain中文网 跟着langchain学AI应用开发",
   favicon: "img/favicon.ico",
   customFields: {
     mendableAnonKey: process.env.MENDABLE_ANON_KEY,
   },
+  scripts: [
+    "img/hmbd.js"
+  ],
   // Set the production url of your site here
   url: "https://js.langchain.com.cn",
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -114,8 +117,13 @@ const config = {
         darkTheme: require("prism-react-renderer/themes/vsDark"),
       },
       image: "img/parrot-chainlink-icon.png",
+      metadata: [
+        { name: 'keywords', content: 'langchain,LLM,chatGPT,应用开发' },
+        {
+          name: 'description', content: 'LangChain中文站，助力大语言模型LLM应用开发、chatGPT应用开发。'
+        }],
       navbar: {
-        title: "🦜️🔗 LangChain",
+        title: "LangChain 🦜️🔗 中文网，跟着LangChain一起学LLM/GPT开发",
         items: [
           {
             href: "https://docs.langchain.com/docs/",
@@ -147,14 +155,35 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "Discord",
-                href: "https://discord.gg/cU2adEyC7w",
+                label: "Langchain英文官网",
+                href: "https://www.Langchain.com",
               },
               {
-                label: "Twitter",
-                href: "https://twitter.com/LangChainAI",
+                label: "Langchain GitHub",
+                href: "https://github.com/hwchase17/langchain",
               },
+              {
+                label: "LLM/GPT应用外包开发",
+                href: "http://www.r-p-a.com/llm-gpt-kaifa/",
+              }
             ],
+          },
+          {
+            title: "LLM/GPT生态",
+            items: [
+              {
+                label: "OpenAI 文档",
+                href: "https://www.openaidoc.com.cn"
+              },
+              {
+                label: "Milvus 文档",
+                href: "https://www.milvus-io.com"
+              },
+              {
+                label: "Pinecone 文档",
+                href: "https://www.pinecone-io.com/"
+              }
+            ]
           },
           {
             title: "GitHub",
@@ -170,20 +199,22 @@ const config = {
             ],
           },
           {
-            title: "More",
-            items: [
-              {
-                label: "Homepage",
-                href: "https://www.langchain.com.cn/",
-              },
-              // {
-              //   label: "Blog",
-              //   href: "https://blog.langchain.dev",
-              // },
-            ],
-          },
+            title: "LangChain技术交流社群",
+            items:[
+             {html: `
+              <img src="https://pic1.zhimg.com/80/v2-31131dcb1732cb5bca7c182c9e8da046_r.jpg" alt="扫我，入群" width="280" height="330"/>`
+            } ]
+            
+          }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} LangChain中文网.`,
+        // logo: {
+        //   alt: 'LangChain中文网',
+        //   // src: 'img/quncode.png',
+        //   src:'https://pic1.zhimg.com/80/v2-31131dcb1732cb5bca7c182c9e8da046_r.jpg',
+        //   width: 320,
+        //   height: 380,
+        // },
+        copyright: `Copyright © ${new Date().getFullYear()} LangChain中文网. 沪ICP备2023014280号-3`,
       },
     }),
 };
