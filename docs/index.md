@@ -1,4 +1,6 @@
-# 欢迎使用LangChain
+# LangChain JS/TS 中文文档
+
+## LangChain中文网 500页超详细中文文档教程，助力LLM/chatGPT应用开发
 
 ![LangChain](https://pica.zhimg.com/50/v2-56e8bbb52aa271012541c1fe1ceb11a2_r.gif 'LangChain中文网')
 

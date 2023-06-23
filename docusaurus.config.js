@@ -126,12 +126,12 @@ const config = {
         title: "LangChain 🦜️🔗 中文网，跟着LangChain一起学LLM/GPT开发",
         items: [
           {
-            href: "https://docs.langchain.com/docs/",
+            href: "https://docs.langchain.com.cn/docs/",
             label: "Concepts",
             position: "left",
           },
           {
-            href: "https://www.langchain.com.cn/",
+            href: "https://python.langchain.com.cn/",
             label: "Python Docs",
             position: "left",
           },
@@ -197,14 +197,6 @@ const config = {
                 href: "https://github.com/liteli1987gmail/js-langchain-CN",
               },
             ],
-          },
-          {
-            title: "LangChain技术交流社群",
-            items:[
-             {html: `
-              <img src="https://pic1.zhimg.com/80/v2-31131dcb1732cb5bca7c182c9e8da046_r.jpg" alt="扫我，入群" width="280" height="330"/>`
-            } ]
-            
           }
         ],
         // logo: {
