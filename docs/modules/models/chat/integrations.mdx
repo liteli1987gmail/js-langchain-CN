@@ -55,7 +55,7 @@ const respA = await chat.generate([
 
   [
 
-    new SystemChatMessage(
+    new SystemMessage(
 
       "You are a helpful assistant that translates English to French."
 
@@ -148,9 +148,9 @@ npm install google-auth-library
 
 ChatGoogleVertexAI 类的工作方式与其他基于聊天的 LLM 相同，具有一些例外情况:
 
-1. 第一个传入的 `SystemChatMessage` 被映射到 PaLM 模型期望的 "context" 参数。
-2. 不允许出现其他 `SystemChatMessage`。
-3. 在第一个 `SystemChatMessage` 之后，必须是一串奇数条消息，代表人类和模型之间的对话。
+1. 第一个传入的 `SystemMessage` 被映射到 PaLM 模型期望的 "context" 参数。
+2. 不允许出现其他 `SystemMessage`。
+3. 在第一个 `SystemMessage` 之后，必须是一串奇数条消息，代表人类和模型之间的对话。
 4. 发送的信息必须交错出现，先是人类信息，然后是 AI 回复，然后是人类信息，以此类推。
 
 

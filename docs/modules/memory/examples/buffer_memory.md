@@ -17,7 +17,7 @@ const memory = new BufferMemory();
 
 const chain = new ConversationChain({ llm: model, memory: memory });
 
-const res1 = await chain.call({ input: "Hi! I'm Jim." });
+const res1 = await chain.invoke({ input: "Hi! I'm Jim." });
 
 console.log({ res1 });
 
@@ -31,7 +31,7 @@ console.log({ res1 });
 
 
 ```typescript
-const res2 = await chain.call({ input: "What's my name?" });
+const res2 = await chain.invoke({ input: "What's my name?" });
 
 console.log({ res2 });
 
@@ -50,15 +50,15 @@ console.log({ res2 });
 
 import { ChatMessageHistory } from "langchain/memory";
 
-import { HumanChatMessage, AIChatMessage } from "langchain/schema";
+import { HumanMessage, AIMessage } from "langchain/schema";
 
 
 
 const pastMessages = [
 
-  new HumanChatMessage("My name's Jonas"),
+  new HumanMessage("My name's Jonas"),
 
-  new AIChatMessage("Nice to meet you, Jonas!"),
+  new AIMessage("Nice to meet you, Jonas!"),
 
 ];
 

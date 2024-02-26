@@ -17,7 +17,7 @@ setTimeout(() => {
 
 try {
   // Call the chain with the inputs and a callback for the streamed tokens
-  const res = await chain.call(
+  const res = await chain.invoke(
     { product: "colorful socks", signal: controller.signal },
     [
       {

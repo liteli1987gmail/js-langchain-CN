@@ -26,7 +26,7 @@ import Example from "!!raw-loader!@examples/models/chat/chat_streaming_stdout.ts
 ```typescript
 import { ChatOpenAI } from "langchain/chat_models/openai";
 
-import { HumanChatMessage, SystemChatMessage } from "langchain/schema";
+import { HumanMessage, SystemMessage } from "langchain/schema";
 
 
 
@@ -41,13 +41,13 @@ const chat = new ChatOpenAI({ temperature: 0 });
 
 ### 聊天模型: 消息作为输入， 消息作为输出
 
-通过将一个或多个消息传递给聊天模型，可以获取聊天完成。响应也将是一条消息。LangChain当前支持的消息类型为`AIChatMessage`， `HumanChatMessage`， `SystemChatMessage` ，和通用`ChatMessage`-- ChatMessage采用任意角色参数，在这里，我们不会使用。大多数时候，您只需要处理`HumanChatMessage`， `AIChatMessage`和`SystemChatMessage`。
+通过将一个或多个消息传递给聊天模型，可以获取聊天完成。响应也将是一条消息。LangChain当前支持的消息类型为`AIMessage`， `HumanMessage`， `SystemMessage` ，和通用`ChatMessage`-- ChatMessage采用任意角色参数，在这里，我们不会使用。大多数时候，您只需要处理`HumanMessage`， `AIMessage`和`SystemMessage`。
 
 
 ```typescript
-const response = await chat.call([
+const response = await chat.invoke([
 
-  new HumanChatMessage(
+  new HumanMessage(
 
     "Translate this sentence from English to French. I love programming."
 
@@ -63,7 +63,7 @@ console.log(response);
 
 
 ```
-AIChatMessage { text: "J'aime programmer." }
+AIMessage { text: "J'aime programmer." }
 
 ```
 
@@ -75,15 +75,15 @@ OpenAI的在线聊天模型（目前包括`gpt-3.5-turbo`和`gpt-4`以及Azure O
 > **&#9432;** 注意，如果您使用Azure OpenAI，请确保更改部署名称以使用您选择的模型的部署。
 
 ```typescript
-const responseB = await chat.call([
+const responseB = await chat.invoke([
 
-  new SystemChatMessage(
+  new SystemMessage(
 
     "You are a helpful assistant that translates English to French."
 
   ),
 
-  new HumanChatMessage("Translate: I love programming."),
+  new HumanMessage("Translate: I love programming."),
 
 ]);
 
@@ -95,7 +95,7 @@ console.log(responseB);
 
 
 ```
-AIChatMessage { text: "J'aime programmer." }
+AIMessage { text: "J'aime programmer." }
 
 ```
 
@@ -109,13 +109,13 @@ const responseC = await chat.generate([
 
   [
 
-    new SystemChatMessage(
+    new SystemMessage(
 
       "You are a helpful assistant that translates English to French."
 
     ),
 
-    new HumanChatMessage(
+    new HumanMessage(
 
       "Translate this sentence from English to French. I love programming."
 
@@ -125,13 +125,13 @@ const responseC = await chat.generate([
 
   [
 
-    new SystemChatMessage(
+    new SystemMessage(
 
       "You are a helpful assistant that translates English to French."
 
     ),
 
-    new HumanChatMessage(
+    new HumanMessage(
 
       "Translate this sentence from English to French. I love artificial intelligence."
 
@@ -159,7 +159,7 @@ console.log(responseC);
 
         text: "J'aime programmer.",
 
-        message: AIChatMessage { text: "J'aime programmer." },
+        message: AIMessage { text: "J'aime programmer." },
 
       }
 
@@ -171,7 +171,7 @@ console.log(responseC);
 
         text: "J'aime l'intelligence artificielle.",
 
-        message: AIChatMessage { text: "J'aime l'intelligence artificielle." }
+        message: AIMessage { text: "J'aime l'intelligence artificielle." }
 
       }
 
@@ -257,7 +257,7 @@ console.log(responseA);
 
         text: "J'aime programmer.",
 
-        message: AIChatMessage { text: "J'aime programmer." }
+        message: AIMessage { text: "J'aime programmer." }
 
       }
 
@@ -293,7 +293,7 @@ const chain = new LLMChain({
 
 
 ```typescript
-const responseB = await chain.call({
+const responseB = await chain.invoke({
 
   input_language: "English",
 
@@ -509,7 +509,7 @@ const chain = new ConversationChain({
 该链将内部累加发送到模型和接收的输出消息。然后，在下一次调用时，它将把消息注入提示符中。所以你可以多次调用该链，并且它会记住先前的消息。(The chain will internally accumulate the messages sent to the model and the ones received as output. Then it will inject the messages into the prompt on the next call. So you can call the chain a few times and it remembers previous messages.)
 
 ```typescript
-const responseH = await chain.call({
+const responseH = await chain.invoke({
 
   input: "hi from London, how are you doing today",
 

@@ -143,7 +143,7 @@ import { OpenAI } from "langchain/llms/openai";
 初始化wrapper后，我们现在可以在一些输入上调用它！
 
 ```typescript
-const res = await model.call(
+const res = await model.invoke(
 
   "What would be a good company name a company that makes colorful socks?"
 
@@ -262,7 +262,7 @@ const chain = new LLMChain({ llm: model, prompt: prompt });
 
 ```typescript
 
-const res = await chain.call({ product: "colorful socks" });
+const res = await chain.invoke({ product: "colorful socks" });
 
 console.log(res);
 
@@ -369,7 +369,7 @@ console.log(`Executing with input "${input}"...`);
 
 
 
-const result = await executor.call({ input });
+const result = await executor.invoke({ input });
 
 
 
@@ -409,7 +409,7 @@ const memory = new BufferMemory();
 
 const chain = new ConversationChain({ llm: model, memory: memory });
 
-const res1 = await chain.call({ input: "Hi! I'm Jim." });
+const res1 = await chain.invoke({ input: "Hi! I'm Jim." });
 
 console.log(res1);
 
@@ -423,7 +423,7 @@ console.log(res1);
 
 
 ```typescript
-const res2 = await chain.call({ input: "What's my name?" });
+const res2 = await chain.invoke({ input: "What's my name?" });
 
 console.log(res2);
 

@@ -25,7 +25,7 @@ export const run = async () => {
     llm: chat,
   });
 
-  const response = await chain.call({
+  const response = await chain.invoke({
     input: "hi! whats up?",
   });
 

@@ -65,7 +65,7 @@ export const run = async () => {
 
 
 
-  const result = await executor.call({ input });
+  const result = await executor.invoke({ input });
 
 
 
@@ -144,11 +144,11 @@ export const run = async () => {
 
   const [resultA, resultB, resultC] = await Promise.all([
 
-    executor.call({ input }),
+    executor.invoke({ input }),
 
-    executor.call({ input }),
+    executor.invoke({ input }),
 
-    executor.call({ input }),
+    executor.invoke({ input }),
 
   ]);
 

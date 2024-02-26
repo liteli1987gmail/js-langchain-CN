@@ -20,7 +20,7 @@ export const run = async () => {
     { agentType: "chat-zero-shot-react-description", verbose: true }
   );
 
-  const result = await agent.call({
+  const result = await agent.invoke({
     input: "what t shirts are available in klarna?",
   });
 

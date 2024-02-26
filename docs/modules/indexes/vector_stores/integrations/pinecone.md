@@ -182,7 +182,7 @@ const chain = VectorDBQAChain.fromLLM(model, vectorStore, {
 
 });
 
-const response = await chain.call({ query: "What is pinecone?" });
+const response = await chain.invoke({ query: "What is pinecone?" });
 
 console.log(response);
 

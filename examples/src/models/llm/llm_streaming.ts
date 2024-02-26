@@ -7,7 +7,7 @@ const chat = new OpenAI({
   streaming: true,
 });
 
-const response = await chat.call("Tell me a joke.", undefined, [
+const response = await chat.invoke("Tell me a joke.", undefined, [
   {
     handleLLMNewToken(token: string) {
       console.log({ token });

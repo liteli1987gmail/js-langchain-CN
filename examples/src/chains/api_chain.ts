@@ -35,7 +35,7 @@ export async function run() {
   const model = new OpenAI({ modelName: "text-davinci-003" });
   const chain = APIChain.fromLLMAndAPIDocs(model, OPEN_METEO_DOCS);
 
-  const res = await chain.call({
+  const res = await chain.invoke({
     question:
       "What is the weather like right now in Munich, Germany in degrees Farenheit?",
   });

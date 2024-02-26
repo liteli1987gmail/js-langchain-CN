@@ -25,7 +25,7 @@ const model = new OpenAI(
 
 );
 
-const res = await model.call("What is a helicone?");
+const res = await model.invoke("What is a helicone?");
 
 ```
 
@@ -59,7 +59,7 @@ const model = new OpenAI(
 
 );
 
-const res = await model.call("What is a helicone?");
+const res = await model.invoke("What is a helicone?");
 
 ```
 
@@ -95,7 +95,7 @@ const model = new OpenAI(
 
 );
 
-const res = await model.call("What is a helicone?");
+const res = await model.invoke("What is a helicone?");
 
 ```
 

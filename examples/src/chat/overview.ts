@@ -8,7 +8,7 @@ import {
   MessagesPlaceholder,
   SystemMessagePromptTemplate,
 } from "langchain/prompts";
-import { HumanChatMessage, SystemChatMessage } from "langchain/schema";
+import { HumanMessage, SystemMessage } from "langchain/schema";
 import { SerpAPI } from "langchain/tools";
 
 export const run = async () => {
@@ -16,8 +16,8 @@ export const run = async () => {
 
   // Sending one message to the chat model, receiving one message back
 
-  let response = await chat.call([
-    new HumanChatMessage(
+  let response = await chat.invoke([
+    new HumanMessage(
       "Translate this sentence from English to French. I love programming."
     ),
   ]);
@@ -26,11 +26,11 @@ export const run = async () => {
 
   // Sending an input made up of two messages to the chat model
 
-  response = await chat.call([
-    new SystemChatMessage(
+  response = await chat.invoke([
+    new SystemMessage(
       "You are a helpful assistant that translates English to French."
     ),
-    new HumanChatMessage("Translate: I love programming."),
+    new HumanMessage("Translate: I love programming."),
   ]);
 
   console.log(response);
@@ -39,18 +39,18 @@ export const run = async () => {
 
   const responseA = await chat.generate([
     [
-      new SystemChatMessage(
+      new SystemMessage(
         "You are a helpful assistant that translates English to French."
       ),
-      new HumanChatMessage(
+      new HumanMessage(
         "Translate this sentence from English to French. I love programming."
       ),
     ],
     [
-      new SystemChatMessage(
+      new SystemMessage(
         "You are a helpful assistant that translates English to French."
       ),
-      new HumanChatMessage(
+      new HumanMessage(
         "Translate this sentence from English to French. I love artificial intelligence."
       ),
     ],
@@ -85,7 +85,7 @@ export const run = async () => {
     llm: chat,
   });
 
-  const responseC = await translateChain.call({
+  const responseC = await translateChain.invoke({
     input_language: "English",
     output_language: "French",
     text: "I love programming.",
@@ -109,13 +109,13 @@ export const run = async () => {
     llm: chat,
   });
 
-  const responseE = await chain.call({
+  const responseE = await chain.invoke({
     input: "hi from London, how are you doing today",
   });
 
   console.log(responseE);
 
-  const responseF = await chain.call({
+  const responseF = await chain.invoke({
     input: "Do you know where I am?",
   });
 

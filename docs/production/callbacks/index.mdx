@@ -31,7 +31,7 @@ import ConstructorExample from "!!raw-loader!@examples/callbacks/docs_constructo
 
 ### 请求回调
 
-在发出请求的 `call()`/`run()`/`apply()` 方法中定义，例如 `chain.call({ input: '...' }， [handler])`，将仅用于该特定请求及其包含的所有子请求（例如，对 LLMChain 的调用会触发对模型的调用，该模型使用在 `call()` 方法中传递的相同处理程序)。
+在发出请求的 `invoke()`/`run()`/`apply()` 方法中定义，例如 `chain.invoke({ input: '...' }， [handler])`，将仅用于该特定请求及其包含的所有子请求（例如，对 LLMChain 的调用会触发对模型的调用，该模型使用在 `call()` 方法中传递的相同处理程序)。
 
 import RequestExample from "!!raw-loader!@examples/callbacks/docs_request_callbacks.ts";
 
