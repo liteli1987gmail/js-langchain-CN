@@ -32,7 +32,7 @@ LangChain提供了一个标准接口来使用聊天模型。聊天模型是语�
 - `SystemMessage`: 一种用于向AI系统提供有关对话信息的聊天消息。通常在对话开始时发送。
 - `ChatMessage`: 一个通用的聊天消息，不仅有一个“文本”字段，还有一个任意的“角色”字段。
 
-要开始使用，只需使用“LLM”实现的“call”方法，传入一个字符串输入。在这个例子中，我们使用的是“ChatOpenAI”实现:
+要开始使用，只需使用“LLM”实现的“invoke”方法，传入一个字符串输入。在这个例子中，我们使用的是“ChatOpenAI”实现:
 
 <CodeBlock language="typescript">{Example}</CodeBlock>
 
