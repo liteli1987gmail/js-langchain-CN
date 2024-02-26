@@ -293,7 +293,7 @@ const chain = new LLMChain({
 
 
 ```typescript
-const responseB = await chain.call({
+const responseB = await chain.invoke({
 
   input_language: "English",
 
@@ -509,7 +509,7 @@ const chain = new ConversationChain({
 该链将内部累加发送到模型和接收的输出消息。然后，在下一次调用时，它将把消息注入提示符中。所以你可以多次调用该链，并且它会记住先前的消息。(The chain will internally accumulate the messages sent to the model and the ones received as output. Then it will inject the messages into the prompt on the next call. So you can call the chain a few times and it remembers previous messages.)
 
 ```typescript
-const responseH = await chain.call({
+const responseH = await chain.invoke({
 
   input: "hi from London, how are you doing today",
 

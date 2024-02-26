@@ -10,7 +10,7 @@ export const run = async () => {
     new Document({ pageContent: "Harrison went to Harvard." }),
     new Document({ pageContent: "Ankush went to Princeton." }),
   ];
-  const resA = await chainA.call({
+  const resA = await chainA.invoke({
     input_documents: docs,
     question: "Where did Harrison go to college?",
   });

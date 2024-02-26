@@ -82,7 +82,7 @@ export const run = async () => {
    * The `handler2` callback handler will only be used for callbacks related to the
    * LLMChain and LLM, since we passed it to the LLMChain and LLM objects upon creation.
    */
-  const result = await agentExecutor.call(
+  const result = await agentExecutor.invoke(
     {
       input: "What is 2 to the power of 8",
     },

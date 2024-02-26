@@ -74,7 +74,7 @@ const chain = new ConversationChain({
 
 
 
-const res1 = await chain.call({ input: "Hi! I'm Jim." });
+const res1 = await chain.invoke({ input: "Hi! I'm Jim." });
 
 console.log({ res1 });
 
@@ -90,7 +90,7 @@ console.log({ res1 });
 
 
 ```typescript
-const res2 = await chain.call({ input: "What's my name?" });
+const res2 = await chain.invoke({ input: "What's my name?" });
 
 console.log({ res2 });
 

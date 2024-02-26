@@ -85,7 +85,7 @@ export const run = async () => {
     llm: chat,
   });
 
-  const responseC = await translateChain.call({
+  const responseC = await translateChain.invoke({
     input_language: "English",
     output_language: "French",
     text: "I love programming.",
@@ -109,13 +109,13 @@ export const run = async () => {
     llm: chat,
   });
 
-  const responseE = await chain.call({
+  const responseE = await chain.invoke({
     input: "hi from London, how are you doing today",
   });
 
   console.log(responseE);
 
-  const responseF = await chain.call({
+  const responseF = await chain.invoke({
     input: "Do you know where I am?",
   });
 

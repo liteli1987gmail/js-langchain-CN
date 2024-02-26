@@ -12,7 +12,7 @@ export async function run() {
     const moderation = new OpenAIModerationChain();
 
     // Send the user's input to the moderation chain and wait for the result
-    const { output: badResult } = await moderation.call({
+    const { output: badResult } = await moderation.invoke({
       input: badString,
       throwError: true, // If set to true, the call will throw an error when the moderation chain detects violating content. If set to false, violating content will return "Text was found that violates OpenAI's content policy.".
     });
@@ -22,7 +22,7 @@ export async function run() {
     const template = "Hello, how are you today {person}?";
     const prompt = new PromptTemplate({ template, inputVariables: ["person"] });
     const chainA = new LLMChain({ llm: model, prompt });
-    const resA = await chainA.call({ person: badResult });
+    const resA = await chainA.invoke({ person: badResult });
     console.log({ resA });
   } catch (error) {
     // If an error is caught, it means the input contains content that violates OpenAI TOS

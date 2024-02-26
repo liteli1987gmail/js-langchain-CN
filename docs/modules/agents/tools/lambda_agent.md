@@ -68,7 +68,7 @@ const executor = await initializeAgentExecutorWithOptions(tools, model, {
 
 const input = `Find out the capital of Croatia. Once you have it, email the answer to testing123@gmail.com.`;
 
-const result = await executor.call({ input });
+const result = await executor.invoke({ input });
 
 console.log(result);
 

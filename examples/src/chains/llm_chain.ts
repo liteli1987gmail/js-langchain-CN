@@ -10,7 +10,7 @@ const prompt = PromptTemplate.fromTemplate(
 const chainA = new LLMChain({ llm: model, prompt });
 
 // The result is an object with a `text` property.
-const resA = await chainA.call({ product: "colorful socks" });
+const resA = await chainA.invoke({ product: "colorful socks" });
 console.log({ resA });
 // { resA: { text: '\n\nSocktastic!' } }
 

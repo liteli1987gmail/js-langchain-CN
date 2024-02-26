@@ -162,7 +162,7 @@ const chain = VectorDBQAChain.fromLLM(model, vectorStore, {
 
 });
 
-const response = await chain.call({ query: "What is opensearch?" });
+const response = await chain.invoke({ query: "What is opensearch?" });
 
 
 

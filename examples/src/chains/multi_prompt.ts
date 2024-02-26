@@ -32,11 +32,11 @@ Here is a question:
     promptTemplates,
   });
 
-  const testPromise1 = multiPromptChain.call({
+  const testPromise1 = multiPromptChain.invoke({
     input: "What is the speed of light?",
   });
 
-  const testPromise2 = multiPromptChain.call({
+  const testPromise2 = multiPromptChain.invoke({
     input: "What is the derivative of x^2?",
   });
 

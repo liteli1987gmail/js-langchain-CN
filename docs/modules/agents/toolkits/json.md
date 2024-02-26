@@ -60,7 +60,7 @@ export const run = async () => {
 
 
 
-  const result = await executor.call({ input });
+  const result = await executor.invoke({ input });
 
 
 
