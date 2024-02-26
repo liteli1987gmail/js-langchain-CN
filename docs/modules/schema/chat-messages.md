@@ -7,30 +7,30 @@ sidebar_position: 3
 
 终端用户与LLMs互动的主要界面是聊天界面。因此，一些模型提供商已经开始以期望聊天消息的方式提供对底层API的访问。这些消息具有内容字段（通常是文本)，并与用户（或角色)相关联。当前支持的用户有System， Human，和AI。
 
-## SystemChatMessage
+## SystemMessage
 
 表示应为AI系统提供说明的聊天消息。
 
 ```类型脚本
-import { SystemChatMessage } from "langchain/schema";
+import { SystemMessage } from "langchain/schema";
 
 
 
-new SystemChatMessage("You are a nice assistant");
+new SystemMessage("You are a nice assistant");
 
 ```
 
 
-## HumanChatMessage
+## HumanMessage
 
 表示来自与AI系统交互的人的信息的聊天消息。
 
 ```类型脚本
-import { HumanChatMessage } from "langchain/schema";
+import { HumanMessage } from "langchain/schema";
 
 
 
-new HumanChatMessage("Hello, how are you?");
+new HumanMessage("Hello, how are you?");
 
 ```
 

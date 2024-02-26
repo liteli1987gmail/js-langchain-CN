@@ -50,13 +50,13 @@ console.log({ res2 });
 
 import { ChatMessageHistory } from "langchain/memory";
 
-import { HumanChatMessage, AIChatMessage } from "langchain/schema";
+import { HumanMessage, AIChatMessage } from "langchain/schema";
 
 
 
 const pastMessages = [
 
-  new HumanChatMessage("My name's Jonas"),
+  new HumanMessage("My name's Jonas"),
 
   new AIChatMessage("Nice to meet you, Jonas!"),
 

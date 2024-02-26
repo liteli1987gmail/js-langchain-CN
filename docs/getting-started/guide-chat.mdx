@@ -26,7 +26,7 @@ import Example from "!!raw-loader!@examples/models/chat/chat_streaming_stdout.ts
 ```typescript
 import { ChatOpenAI } from "langchain/chat_models/openai";
 
-import { HumanChatMessage, SystemChatMessage } from "langchain/schema";
+import { HumanMessage, SystemMessage } from "langchain/schema";
 
 
 
@@ -41,13 +41,13 @@ const chat = new ChatOpenAI({ temperature: 0 });
 
 ### 聊天模型: 消息作为输入， 消息作为输出
 
-通过将一个或多个消息传递给聊天模型，可以获取聊天完成。响应也将是一条消息。LangChain当前支持的消息类型为`AIChatMessage`， `HumanChatMessage`， `SystemChatMessage` ，和通用`ChatMessage`-- ChatMessage采用任意角色参数，在这里，我们不会使用。大多数时候，您只需要处理`HumanChatMessage`， `AIChatMessage`和`SystemChatMessage`。
+通过将一个或多个消息传递给聊天模型，可以获取聊天完成。响应也将是一条消息。LangChain当前支持的消息类型为`AIChatMessage`， `HumanMessage`， `SystemMessage` ，和通用`ChatMessage`-- ChatMessage采用任意角色参数，在这里，我们不会使用。大多数时候，您只需要处理`HumanMessage`， `AIChatMessage`和`SystemMessage`。
 
 
 ```typescript
 const response = await chat.call([
 
-  new HumanChatMessage(
+  new HumanMessage(
 
     "Translate this sentence from English to French. I love programming."
 
@@ -77,13 +77,13 @@ OpenAI的在线聊天模型（目前包括`gpt-3.5-turbo`和`gpt-4`以及Azure O
 ```typescript
 const responseB = await chat.call([
 
-  new SystemChatMessage(
+  new SystemMessage(
 
     "You are a helpful assistant that translates English to French."
 
   ),
 
-  new HumanChatMessage("Translate: I love programming."),
+  new HumanMessage("Translate: I love programming."),
 
 ]);
 
@@ -109,13 +109,13 @@ const responseC = await chat.generate([
 
   [
 
-    new SystemChatMessage(
+    new SystemMessage(
 
       "You are a helpful assistant that translates English to French."
 
     ),
 
-    new HumanChatMessage(
+    new HumanMessage(
 
       "Translate this sentence from English to French. I love programming."
 
@@ -125,13 +125,13 @@ const responseC = await chat.generate([
 
   [
 
-    new SystemChatMessage(
+    new SystemMessage(
 
       "You are a helpful assistant that translates English to French."
 
     ),
 
-    new HumanChatMessage(
+    new HumanMessage(
 
       "Translate this sentence from English to French. I love artificial intelligence."
 
