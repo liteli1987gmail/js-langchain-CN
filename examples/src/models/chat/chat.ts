@@ -4,7 +4,7 @@ import { HumanMessage, SystemMessage } from "langchain/schema";
 export const run = async () => {
   const chat = new ChatOpenAI({ modelName: "gpt-3.5-turbo" });
   // Pass in a list of messages to `call` to start a conversation. In this simple example, we only pass in one message.
-  const responseA = await chat.call([
+  const responseA = await chat.invoke([
     new HumanMessage(
       "What is a good name for a company that makes colorful socks?"
     ),
@@ -15,7 +15,7 @@ export const run = async () => {
   // You can also pass in multiple messages to start a conversation.
   // The first message is a system message that describes the context of the conversation.
   // The second message is a human message that starts the conversation.
-  const responseB = await chat.call([
+  const responseB = await chat.invoke([
     new SystemMessage(
       "You are a helpful assistant that translates English to French."
     ),

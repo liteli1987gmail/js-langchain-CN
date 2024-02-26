@@ -45,7 +45,7 @@ const chat = new ChatOpenAI({ temperature: 0 });
 
 
 ```typescript
-const response = await chat.call([
+const response = await chat.invoke([
 
   new HumanMessage(
 
@@ -75,7 +75,7 @@ OpenAI的在线聊天模型（目前包括`gpt-3.5-turbo`和`gpt-4`以及Azure O
 > **&#9432;** 注意，如果您使用Azure OpenAI，请确保更改部署名称以使用您选择的模型的部署。
 
 ```typescript
-const responseB = await chat.call([
+const responseB = await chat.invoke([
 
   new SystemMessage(
 

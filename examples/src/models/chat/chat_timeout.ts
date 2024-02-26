@@ -3,7 +3,7 @@ import { HumanMessage } from "langchain/schema";
 
 const chat = new ChatOpenAI({ temperature: 1 });
 
-const response = await chat.call(
+const response = await chat.invoke(
   [
     new HumanMessage(
       "What is a good name for a company that makes colorful socks?"

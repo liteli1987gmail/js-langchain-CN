@@ -12,7 +12,7 @@ const chat = new ChatOpenAI({
   ],
 });
 
-await chat.call([
+await chat.invoke([
   new HumanMessage("Write me a song about sparkling water."),
 ]);
 /*

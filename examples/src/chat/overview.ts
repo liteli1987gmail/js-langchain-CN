@@ -16,7 +16,7 @@ export const run = async () => {
 
   // Sending one message to the chat model, receiving one message back
 
-  let response = await chat.call([
+  let response = await chat.invoke([
     new HumanMessage(
       "Translate this sentence from English to French. I love programming."
     ),
@@ -26,7 +26,7 @@ export const run = async () => {
 
   // Sending an input made up of two messages to the chat model
 
-  response = await chat.call([
+  response = await chat.invoke([
     new SystemMessage(
       "You are a helpful assistant that translates English to French."
     ),

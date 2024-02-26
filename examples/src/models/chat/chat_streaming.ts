@@ -6,7 +6,7 @@ const chat = new ChatOpenAI({
   streaming: true,
 });
 
-const response = await chat.call(
+const response = await chat.invoke(
   [new HumanMessage("Tell me a joke.")],
   undefined,
   [
