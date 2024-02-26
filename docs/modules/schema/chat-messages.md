@@ -35,17 +35,17 @@ new HumanMessage("Hello, how are you?");
 ```
 
 
-## AIChatMessage
+## AIMessage
 
 表示来自AI系统的消息的聊天消息。
 
 ```typescript
 
-import { AIChatMessage } from "langchain/schema";
+import { AIMessage } from "langchain/schema";
 
 
 
-new AIChatMessage("I am doing well, thank you!");
+new AIMessage("I am doing well, thank you!");
 
 ```
 

@@ -35,6 +35,6 @@ console.log(response);
 // { token: ' everything' }
 // { token: '.' }
 // { token: '' }
-// AIChatMessage {
+// AIMessage {
 //   text: "\n\nWhy don't scientists trust atoms?\n\nBecause they make up everything."
 // }

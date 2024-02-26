@@ -12,4 +12,4 @@ const response = await chat.call(
   { timeout: 1000 } // 1s timeout
 );
 console.log(response);
-// AIChatMessage { text: '\n\nRainbow Sox Co.' }
+// AIMessage { text: '\n\nRainbow Sox Co.' }

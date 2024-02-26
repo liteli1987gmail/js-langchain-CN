@@ -41,7 +41,7 @@ const chat = new ChatOpenAI({ temperature: 0 });
 
 ### 聊天模型: 消息作为输入， 消息作为输出
 
-通过将一个或多个消息传递给聊天模型，可以获取聊天完成。响应也将是一条消息。LangChain当前支持的消息类型为`AIChatMessage`， `HumanMessage`， `SystemMessage` ，和通用`ChatMessage`-- ChatMessage采用任意角色参数，在这里，我们不会使用。大多数时候，您只需要处理`HumanMessage`， `AIChatMessage`和`SystemMessage`。
+通过将一个或多个消息传递给聊天模型，可以获取聊天完成。响应也将是一条消息。LangChain当前支持的消息类型为`AIMessage`， `HumanMessage`， `SystemMessage` ，和通用`ChatMessage`-- ChatMessage采用任意角色参数，在这里，我们不会使用。大多数时候，您只需要处理`HumanMessage`， `AIMessage`和`SystemMessage`。
 
 
 ```typescript
@@ -63,7 +63,7 @@ console.log(response);
 
 
 ```
-AIChatMessage { text: "J'aime programmer." }
+AIMessage { text: "J'aime programmer." }
 
 ```
 
@@ -95,7 +95,7 @@ console.log(responseB);
 
 
 ```
-AIChatMessage { text: "J'aime programmer." }
+AIMessage { text: "J'aime programmer." }
 
 ```
 
@@ -159,7 +159,7 @@ console.log(responseC);
 
         text: "J'aime programmer.",
 
-        message: AIChatMessage { text: "J'aime programmer." },
+        message: AIMessage { text: "J'aime programmer." },
 
       }
 
@@ -171,7 +171,7 @@ console.log(responseC);
 
         text: "J'aime l'intelligence artificielle.",
 
-        message: AIChatMessage { text: "J'aime l'intelligence artificielle." }
+        message: AIMessage { text: "J'aime l'intelligence artificielle." }
 
       }
 
@@ -257,7 +257,7 @@ console.log(responseA);
 
         text: "J'aime programmer.",
 
-        message: AIChatMessage { text: "J'aime programmer." }
+        message: AIMessage { text: "J'aime programmer." }
 
       }
 

@@ -10,5 +10,5 @@ export const run = async () => {
     ),
   ]);
   console.log(response);
-  // AIChatMessage { text: '\n\nRainbow Sox Co.' }
+  // AIMessage { text: '\n\nRainbow Sox Co.' }
 };
